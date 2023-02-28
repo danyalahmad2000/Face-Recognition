@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit to S3 bucket
         env:
-          S3_BUCKET: my-s3-buckett
+          S3_BUCKET: my-s3-bucket
         run: |
           cd $GITHUB_WORKSPACE
           aws s3 sync . s3://$S3_BUCKET --delete --acl public-read
